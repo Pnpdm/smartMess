@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Mess | NGO Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="portal-body">
+  <header class="portal-header">
+    <h1>NGO Portal</h1>
+    <button id="logoutBtnNgo" class="btn secondary small">Logout</button>
+  </header>
+  <main class="portal-main">
+    <section class="card">
+      <h2>Available Donations</h2>
+      <table class="table" id="ngoPortalTable">
+        <thead>
+          <tr>
+            <th>Mess</th>
+            <th>Meals</th>
+            <th>Pickup</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filled by JS from backend -->
+        </tbody>
+      </table>
+      <p id="ngoStatus" class="muted small mt-1"></p>
+    </section>
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

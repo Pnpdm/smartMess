@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Mess | Student Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="portal-body">
+  <header class="portal-header">
+    <h1>Student Portal</h1>
+    <button id="logoutBtnStudent" class="btn secondary small">Logout</button>
+  </header>
+  <main class="portal-main">
+    <section class="card">
+      <h2>Hello, <span id="studentName">Student</span> 👋</h2>
+      <p class="muted">Mark your attendance for today's meals.</p>
+      <div class="student-attendance-grid" id="attendanceButtons">
+        <!-- JS will render three cards for breakfast / lunch / dinner -->
+      </div>
+      <button id="saveAttendanceBtn" class="btn primary mt-2">Save Attendance</button>
+      <p id="attendanceStatus" class="muted small mt-1"></p>
+    </section>
+
+    <section class="card">
+      <h2>Your Weekly Menu</h2>
+      <ul class="menu-list" id="studentWeeklyMenu"></ul>
+    </section>
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

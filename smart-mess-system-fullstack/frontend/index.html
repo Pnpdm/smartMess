@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Mess Waste Reduction System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-circle">SM</div>
+      <span>Smart Mess</span>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#problem">Problem</a>
+      <a href="#how">How it Works</a>
+      <a href="#student">Student</a>
+      <a href="#admin">Mess Admin</a>
+      <a href="#ngo">NGO</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#tech">Tech Stack</a>
+      <a href="#contact">Contact</a>
+      <a href="auth.html" class="nav-auth-btn">Login / Signup</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="section hero">
+      <div class="hero-left">
+        <h1>Smart Mess Waste<br /><span>Reduction System</span></h1>
+        <p>
+          Connect student attendance, food preparation, and NGO donations
+          on one smart dashboard. Reduce food waste, save money, and feed
+          people in need.
+        </p>
+        <div class="hero-buttons">
+          <a href="student.html" class="btn primary">Student Portal</a>
+          <a href="admin.html" class="btn secondary">Admin Portal</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <h3>1.2K+</h3>
+            <p>Meals Optimised</p>
+          </div>
+          <div class="stat-card">
+            <h3>35%</h3>
+            <p>Waste Reduced</p>
+          </div>
+          <div class="stat-card">
+            <h3>18+</h3>
+            <p>Partner NGOs</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="card">
+          <h3>Today's Dinner</h3>
+          <p class="muted">Total registered: <span id="totalRegistered">0</span> students</p>
+          <p class="muted">
+            Confirmed:
+            <span id="confirmedCount" class="pill pill-green">0</span>
+            | Skipped:
+            <span id="skippedCount" class="pill pill-red">0</span>
+          </p>
+          <div class="progress-wrapper">
+            <div class="progress-bar">
+              <div id="attendanceProgress" class="progress-fill"></div>
+            </div>
+          </div>
+          <button class="btn full" id="viewAttendanceBtn">View Attendance (Demo)</button>
+        </div>
+
+        <div class="card">
+          <h3>Leftover Alert</h3>
+          <p class="muted">
+            Estimated extra meals:
+            <span id="extraMeals">0</span>
+          </p>
+          <p class="muted small">
+            Auto-notify nearby NGOs when extra food is available.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Live Mess Load</h3>
+          <p class="muted small">Ideal preparation range: 65% – 75%</p>
+          <div class="progress-wrapper">
+            <div class="progress-bar">
+              <div id="messLoadProgress" class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section id="problem" class="section">
+      <h2 class="section-title">The Problem</h2>
+      <p class="section-subtitle">
+        Why do hostel messes waste so much food?
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Inaccurate Headcount</h3>
+          <p>
+            Mess managers don't know how many students will actually come for
+            each meal. Food is prepared based on guess-work.
+          </p>
+        </div>
+        <div class="card">
+          <h3>No Visibility</h3>
+          <p>
+            Student preferences and attendance patterns are not tracked, leading
+            to repetitive menus and low student satisfaction.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Waste of Resources</h3>
+          <p>
+            Extra food often lands in the dustbin instead of reaching NGOs or
+            shelters that need it urgently.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="section">
+      <h2 class="section-title">How the Smart Mess System Works</h2>
+      <p class="section-subtitle">
+        End‑to‑end digital flow from student to plate to NGO.
+      </p>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>1. Student Confirms / Skips Meal</h3>
+            <p>
+              Students log in and mark <strong>YES</strong> or
+              <strong>NO</strong> for upcoming breakfast, lunch, or dinner
+              before a cut‑off time.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>2. Mess Gets Accurate Headcount</h3>
+            <p>
+              The mess dashboard shows real‑time attendance and suggests
+              <strong>ideal quantity</strong> of food to prepare.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>3. Leftover Food is Calculated</h3>
+            <p>
+              If there is extra food, the system automatically estimates
+              portions and creates a <strong>donation ticket</strong>.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>4. NGOs Get Instant Alerts</h3>
+            <p>
+              Registered NGOs or shelters receive notifications with pickup
+              location, time, and quantity details.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student view -->
+    <section id="student" class="section">
+      <h2 class="section-title">Student View</h2>
+      <p class="section-subtitle">
+        Simple interface to mark attendance and see the weekly menu.
+      </p>
+      <div class="two-column">
+        <div class="card">
+          <div class="card-header-row">
+            <h3>Student Dashboard (Mock UI)</h3>
+            <span class="pill pill-outline" id="studentYear">B.Tech - 3rd Year</span>
+          </div>
+          <p class="muted" id="studentGreeting">Hello, Student 👋</p>
+          <div class="student-grid">
+            <div>
+              <h4>Today's Meals</h4>
+              <ul class="pill-list" id="todayMealsList">
+                <!-- Filled by JS -->
+              </ul>
+            </div>
+            <div>
+              <h4>Weekly Menu</h4>
+              <ul class="menu-list" id="weeklyMenuList">
+                <!-- Filled by JS -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Key Features for Students</h3>
+          <ul class="tick-list">
+            <li>One click to confirm or skip each meal.</li>
+            <li>View weekly menu and calories estimate.</li>
+            <li>Get reminders before cut‑off time.</li>
+            <li>Earn “Green Points” for honest responses.</li>
+          </ul>
+          <a href="student.html" class="btn primary mt-2">Open Student Portal</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin view -->
+    <section id="admin" class="section">
+      <h2 class="section-title">Mess Admin View</h2>
+      <p class="section-subtitle">
+        Plan accurately, cook smartly, and reduce wastage.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Real‑time Attendance</h3>
+          <p>
+            See exactly how many students have confirmed for each meal.
+          </p>
+          <p class="muted small" id="adminAttendanceSummary">
+            Breakfast: - / - &nbsp; Lunch: - / - &nbsp; Dinner: - / -
+          </p>
+        </div>
+        <div class="card">
+          <h3>Smart Preparation Suggestions</h3>
+          <p>
+            System suggests ideal quantity of rice, dal, sabzi, and chapatis
+            using past data.
+          </p>
+          <p class="muted small">
+            Example: Prepare 18 kg rice instead of 25 kg.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Leftover &amp; Donation Panel</h3>
+          <p>
+            Enter actual prepared quantity and served plates. System estimates
+            leftover and triggers NGO alerts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NGO view -->
+    <section id="ngo" class="section">
+      <h2 class="section-title">NGO &amp; Donation Flow</h2>
+      <p class="section-subtitle">
+        Make sure extra food reaches the right hands in time.
+      </p>
+      <div class="two-column">
+        <div class="card">
+          <h3>NGO Dashboard (Mock)</h3>
+          <table class="table" id="ngoTable">
+            <thead>
+              <tr>
+                <th>Mess</th>
+                <th>Meals</th>
+                <th>Pickup</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Filled by JS -->
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Benefits for NGOs</h3>
+          <ul class="tick-list">
+            <li>Real‑time information on available food.</li>
+            <li>Location &amp; route sharing for pickup.</li>
+            <li>Priority tagging based on expiry time.</li>
+            <li>History of pickups and feedback.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analytics -->
+    <section id="analytics" class="section">
+      <h2 class="section-title">Analytics &amp; Reports</h2>
+      <p class="section-subtitle">
+        Visualise waste reduction and student participation.
+      </p>
+      <div class="two-column">
+        <div class="card">
+          <h3>Sample Analytics (Static UI)</h3>
+          <div class="fake-chart">
+            <div class="bar" style="--h: 80%">Month 1</div>
+            <div class="bar" style="--h: 65%">Month 2</div>
+            <div class="bar" style="--h: 50%">Month 3</div>
+            <div class="bar" style="--h: 40%">Month 4</div>
+            <div class="bar" style="--h: 30%">Month 5</div>
+          </div>
+          <p class="muted small">
+            Example: Gradual reduction in food waste over 5 months.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Key Insights</h3>
+          <ul class="tick-list">
+            <li>Monthly food waste comparison (kg).</li>
+            <li>Student participation percentage per hostel.</li>
+            <li>Most liked and disliked dishes.</li>
+            <li>Total meals donated to NGOs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech -->
+    <section id="tech" class="section">
+      <h2 class="section-title">Technology &amp; Architecture</h2>
+      <p class="section-subtitle">
+        How this project is implemented technically.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Frontend</h3>
+          <p>HTML5, CSS3, JavaScript</p>
+          <p>Responsive layout for mobile &amp; desktop.</p>
+          <p>Clean component‑based sections.</p>
+        </div>
+        <div class="card">
+          <h3>Backend</h3>
+          <p>Node.js + Express</p>
+          <p>REST APIs for student, mess, NGO data.</p>
+          <p>JWT‑based authentication.</p>
+        </div>
+        <div class="card">
+          <h3>Database &amp; Others</h3>
+          <p>MongoDB to store records.</p>
+          <p>Can be deployed on Render / Railway etc.</p>
+          <p>Push / email notifications (future scope).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact &amp; Credits</h2>
+      <p class="section-subtitle">
+        Perfect to show in your viva / project demo.
+      </p>
+      <div class="two-column">
+        <div class="card">
+          <h3>Project Details</h3>
+          <p><strong>Project:</strong> Smart Mess Waste Reduction System</p>
+          <p><strong>Domain:</strong> Web Application / Waste Management</p>
+          <p><strong>Developed by:</strong> <span id="devName">Your Name</span></p>
+          <p><strong>Guided by:</strong> <span id="guideName">Faculty Name</span></p>
+        </div>
+        <div class="card">
+          <h3>Get in Touch</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="contactName" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" id="contactEmail" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <textarea id="contactMessage" placeholder="Message or Feedback" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn primary full">Send (Demo Only)</button>
+            <p id="contactStatus" class="muted small mt-1"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2025 Smart Mess Waste Reduction System – Academic Project Template.
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

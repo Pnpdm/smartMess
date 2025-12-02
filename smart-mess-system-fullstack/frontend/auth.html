@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Mess | Login & Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="auth-body">
+  <div class="auth-container">
+    <h1>Smart Mess</h1>
+    <p class="muted">Login or create an account</p>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">Login</button>
+      <button class="auth-tab" data-tab="signup">Signup</button>
+    </div>
+
+    <div id="loginTab" class="auth-panel active">
+      <form id="loginForm">
+        <div class="form-group">
+          <input type="email" id="loginEmail" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+          <input type="password" id="loginPassword" placeholder="Password" required />
+        </div>
+        <button type="submit" class="btn primary full">Login</button>
+      </form>
+      <p id="loginStatus" class="muted small mt-1"></p>
+    </div>
+
+    <div id="signupTab" class="auth-panel">
+      <form id="signupForm">
+        <div class="form-group">
+          <input type="text" id="signupName" placeholder="Full Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" id="signupEmail" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+          <input type="password" id="signupPassword" placeholder="Password" required />
+        </div>
+        <div class="form-group">
+          <select id="signupRole" required>
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="admin">Mess Admin</option>
+            <option value="ngo">NGO</option>
+          </select>
+        </div>
+        <button type="submit" class="btn primary full">Create Account</button>
+      </form>
+      <p id="signupStatus" class="muted small mt-1"></p>
+    </div>
+
+    <a class="muted small mt-2" href="index.html">← Back to Landing Page</a>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

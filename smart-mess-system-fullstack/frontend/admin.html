@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Mess | Admin Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="portal-body">
+  <header class="portal-header">
+    <h1>Mess Admin Portal</h1>
+    <button id="logoutBtnAdmin" class="btn secondary small">Logout</button>
+  </header>
+  <main class="portal-main">
+    <section class="card">
+      <h2>Today&apos;s Attendance Overview</h2>
+      <p id="adminOverviewText" class="muted">Loading...</p>
+    </section>
+
+    <section class="card">
+      <h2>Enter Prepared &amp; Served Plates</h2>
+      <form id="leftoverForm">
+        <div class="form-group">
+          <input type="text" id="hostelName" placeholder="Hostel / Mess Name" required />
+        </div>
+        <div class="form-group">
+          <input type="number" id="preparedMeals" placeholder="Meals prepared" required />
+        </div>
+        <div class="form-group">
+          <input type="number" id="servedMeals" placeholder="Meals served" required />
+        </div>
+        <div class="form-group">
+          <input type="time" id="pickupTime" required />
+        </div>
+        <button type="submit" class="btn primary">Create Donation Ticket</button>
+      </form>
+      <p id="leftoverStatus" class="muted small mt-1"></p>
+    </section>
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
